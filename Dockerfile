@@ -19,7 +19,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF \
 USER conda
 # There are no py35 conda packages for spark and py4j - create a py34 conda env
 RUN conda config --add channels anaconda-cluster \
-    && conda create -yq -n py34 --python=3.4 anaconda \
+    && conda create -yq -n py34 python=3.4 anaconda \
     && source activate py34
     && conda install -yq -c anaconda-cluster spark py4j \
     && conda install -yq seaborn cloudpickle \
