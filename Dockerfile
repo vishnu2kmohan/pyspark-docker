@@ -21,8 +21,12 @@ USER conda
 RUN conda config --add channels anaconda-cluster \
     && conda create -yq -n py34 python=3.4 anaconda \
     && source activate py34
-    && conda install -yq -c anaconda-cluster spark py4j \
-    && conda install -yq seaborn cloudpickle \
+    && conda install -yq -c anaconda-cluster \
+       py4j \
+       scala 
+       spark \
+    && conda install -yq \
+       cloudpickle \
     && conda clean -yt \
     && conda clean -yp \
     && source deactivate
