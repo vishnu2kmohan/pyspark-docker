@@ -26,6 +26,7 @@ RUN conda config --add channels anaconda-cluster \
        spark \
     && conda install -yq -n py34 \
        cloudpickle \
+       ipyparallel \
        seaborn \
     && conda clean -yt \
     && conda clean -yp
