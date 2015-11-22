@@ -38,3 +38,4 @@ CMD ["notebook.sh"]
 
 # Add local files as late as possible to stay cache friendly
 COPY notebook.sh /usr/local/bin/
+COPY jupyter_notebook_config.py ${CONDA_USER_HOME}/.jupyter/
