@@ -10,7 +10,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF \
     && CODENAME=jessie \
     && echo "deb http://repos.mesosphere.io/${DISTRO} ${CODENAME} main" \
        > /etc/apt/sources.list.d/mesosphere.list \
-    && apt-get -yq --fix-missing update \
+    && apt-get update -yq --fix-missing \
     && echo "Updated repo data" \
     && apt-get install -yq --no-install-recommends \
        openjdk-7-jre-headless \
