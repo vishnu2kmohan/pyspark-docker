@@ -23,7 +23,7 @@ RUN conda config --add channels anaconda-cluster \
     && source activate py34
     && conda install -yq -c anaconda-cluster \
        py4j \
-       scala 
+       scala \
        spark \
     && conda install -yq \
        cloudpickle \
