@@ -28,8 +28,7 @@ RUN conda config --add channels anaconda-cluster \
     && conda install -yq \
        cloudpickle \
     && conda clean -yt \
-    && conda clean -yp \
-    && source deactivate
+    && conda clean -yp
 
 EXPOSE 8888
 WORKDIR ${CONDA_USER_HOME}/work
