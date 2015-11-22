@@ -20,7 +20,7 @@ USER conda
 # There are no py35 conda packages for spark and py4j - create a py34 conda env
 RUN conda config --add channels anaconda-cluster \
     && conda create -yq -n py34 python=3.4 anaconda \
-    && conda install -yq -c anaconda-cluster -n py34\
+    && conda install -yq -c anaconda-cluster -n py34 \
        py4j \
        scala \
        spark \
