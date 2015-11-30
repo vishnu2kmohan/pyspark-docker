@@ -29,7 +29,8 @@ RUN conda config --add channels anaconda-cluster \
        ipyparallel \
        seaborn \
     && conda clean -yt \
-    && conda clean -yp
+    && conda clean -yp \
+    && bash -c 'source activate py34 && pip install -q -U httpie hdfs pywebhdfs'
 
 EXPOSE 8888
 WORKDIR ${CONDA_USER_HOME}/work
